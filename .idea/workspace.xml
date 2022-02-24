@@ -5,12 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8728ee3d-a9dc-4f75-950f-d9684d6b65f9" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/public/images/andreea-russu-OMkXC3Qz-uc-unsplash.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/baby_elephant.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/baby_monkey.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/coala.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/crocodile.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/elephants.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/leopard.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/monkey_2.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/nikolay-tchaouchev-LK4qTPvWdnM-unsplash.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/owl.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/phlamingo.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/pinguins.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/redcharlie-20QjpV5rx3s-unsplash.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/waldemar-brandt-zQsCISvBY2E-unsplash.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/white_bear.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/stylesheets/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/stylesheets/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/layout.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/layout.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/partials/carousel.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/partials/carousel.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/partials/header.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/partials/header.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/database.json" beforeDir="false" afterPath="$PROJECT_DIR$/db/database.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/seeders/20220223152241-Animal.js" beforeDir="false" afterPath="$PROJECT_DIR$/db/seeders/20220223152241-Animal.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +53,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -78,5 +92,8 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>
