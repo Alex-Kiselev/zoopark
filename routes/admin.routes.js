@@ -3,7 +3,7 @@ const { checkUser, deepCheckUser } = require('../middleware/allMiddleware')
 const router = require('express').Router();
 
 router.route('/')
-  .get(checkUser, deepCheckUser, async (req, res) => {
+  .get(checkUser, async (req, res) => {
     try {
       const tarifGrid = await TarifGrid.findAll({ include: { all: true }, raw: true });
       res.render('admin', { tarifGrid });
