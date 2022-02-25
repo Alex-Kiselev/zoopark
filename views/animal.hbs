@@ -1,0 +1,112 @@
+<form name="addAnimal" action="/animal" method="post" enctype="multipart/form-data">
+   <div class="container">
+
+      <div class="mb-3">
+         <label for="exampleInputDescription" class="form-label">Title</label>
+         <input required name="title" type="text" class="form-control" id="postDescription" aria-describedby="emailHelp">
+      </div>
+
+      <div class="mb-3">
+         <label for="exampleInputTitle" class="form-label">Text</label>
+         <input required name="description" type="text" class="form-control" id="postTitle" aria-describedby="emailHelp">
+      </div>
+
+      <div class="mb-3">
+         <label for="exampleInputImg" class="form-label">Img</label>
+         <input required name="img" type="file" class="form-control" id="postImg">
+      </div>
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+
+   </div>
+</form>
+
+
+
+
+
+<div id="allAnimal" class="container" enctype="multipart/form-data">
+
+   {{#each animal}}
+   <div data-id="{{this.id}}" class="card oneCard" style="width: 18rem;">
+      <img src="{{this.img}}" class="card-img-top" alt="...">
+      <div class="card-body">
+         <h5 id="title{{id}}" class="card-title">{{this.title}}</h5>
+         <p class="card-text" id="description{{id}}">{{this.description}}</p>
+         <button id="delete-button" type="button">Удалить</button>
+
+         <button id='redactor-button' type="button" class="btn btn-primary" data-bs-toggle="modal"
+            data-bs-target="#staticBackdrop">
+            Внести изменения
+         </button>
+
+      </div>
+   </div>
+
+   <form id="{{this.id}}"  class="modal-form hidden">
+      {{!-- <div>FORM{{this.id}}</div> --}}
+      <div id="modal-form-body">
+
+         <div class="mb-3">
+            <label for="exampleInputDescription" class="form-label">Title</label>
+            <input name="title" type="text" class="form-control" id="postDescription" aria-describedby="emailHelp">
+         </div>
+
+         <div class="mb-3">
+            <label for="exampleInputTitle" class="form-label">Text</label>
+            <input name="description" type="text" class="form-control" id="postTitle" aria-describedby="emailHelp">
+         </div>
+
+         {{!-- <div class="mb-3">
+            <label for="exampleInputImg" class="form-label">Img</label>
+            <input name="img" type="file" class="form-control" id="postImg">
+         </div> --}}
+
+         <button type="submit" class="btn btn-primary">Submit</button>
+         <button type="submit" class="btn btn-primary">Закрыть</button>
+
+      </div>
+   </form>
+
+
+   {{/each}}
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="/js/animal.js"></script>

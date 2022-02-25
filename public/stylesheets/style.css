@@ -215,3 +215,27 @@ display: flex;
 .form-label {
   color: #f2b31e;
 }
+
+.showen{
+   display:block
+}
+.hidden{
+   display: none
+}
+
+.modal-form{
+    position:fixed;
+    padding:0;
+    margin:0;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background:rgba(255,255,255,0.5);
+}
+
+#modal-form-body{
+   margin: 15vh 30vw;
+   background: whitesmoke;
+   padding: 15px;
+}
