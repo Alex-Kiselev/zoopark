@@ -8,7 +8,7 @@ const upload = multer({ dest:"public/images/"});
 
 //animal
 router.get('/', async (req, res) => {
-const animal = await Animal.findAll()
+const animal = await Animal.findAll({order: [['id', 'DESC']]})
 
    res.render('animal',{animal})
 })
@@ -18,7 +18,10 @@ const animal = await Animal.findAll()
 //ДОБАВЛЕНИЕ ручка для добавления животного
 //animal/
 router.post('/', upload.single('img'), async (req, res) => {
-   const {id} = req.session.userId
+   // console.log('FILE',req.file);
+   console.log('BODY',req.body);
+   const id = req.session.userId
+   const {title,description} = req.body
    const img = req.file.path.split('/').slice(1).join('/');
    try {
       const createAnimal = await Animal.create({
@@ -26,12 +29,10 @@ router.post('/', upload.single('img'), async (req, res) => {
          title,
          description,
          user_id: id
-       })
-      //  res.sendStatus(200)
-       res.json(createAnimal);
+       });
+       res.redirect('/animal');
    } catch (error) {
       console.log(error);
-      res.sendStatus(500);
    }
  
 })
@@ -39,8 +40,8 @@ router.post('/', upload.single('img'), async (req, res) => {
 //УДАЛЕНИЕ
 //animal/
 //===============================================================================================================================================================
-router.delete('/animal/:id', async(req, res) => {
-
+router.delete('/:id', async(req, res) => {
+   console.log(req.params);
 
    const {id} = req.params;
    try {
@@ -58,14 +59,12 @@ router.delete('/animal/:id', async(req, res) => {
 // // //РЕДАКТИРОВАНИЕ
 //animal/:id
 
-router.put('/animal/:id', upload.single('img'),async (req, res) => {
-
+router.put('/:id',async (req, res) => {
    const {id} = req.params;
-   const img = req.file.path.split('/').slice(1).join('/');
    const {title, description} = req.body;
    try {
-   const animalUpdate = await Animal.update({img,title, description},{where: {id:id}})
-      res.json(animalUpdate)
+   const animalUpdate = await Animal.update({title, description},{where: {id}});
+      res.sendStatus(200)
    } catch (error) {
       console.log(error);
       res.sendStatus(500)

@@ -18,6 +18,7 @@ router.get('/signin', (req, res) => {
 });
 
 router.post('/signin', showBody, async (req, res) => {
+console.log(sha256(req.body.password) );
   const { email } = req.body;
   const user = await User.findOne({ where: { email } }); // ищем в бд юзера по почте
   if (!user) {
